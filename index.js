@@ -45,12 +45,12 @@ server.post("/api/register", async (req, res) => {
 
 server.post("/api/login", async (req, res) => {
   try {
-    if (!req.body.name.trim() || !req.body.password.trim()) {
+    if (!req.body.username.trim() || !req.body.password.trim()) {
       res.status(404).json({
         message: `User not found`,
       });
     } else {
-      res.send(`Hello There, ${req.body.name}!`);
+      res.send(`<h1>Hello There, ${req.body.username}!</h1>`);
     }
   } catch (err) {
     res.status(500).json({
