@@ -6,14 +6,16 @@ const server = express();
 server.use(express());
 
 server.get("/api/users", async (req, res) => {
-  try {
-    const users = await User.find();
-    res.status(200).json(users);
-  } catch (error) {
-    res.status(500).json({
-      message: `The users info could not be found`,
-    });
-  }
+  console.log("test");
+  //   try {
+  //     const users = await User.find();
+  //     // res.status(200).json(users);
+  //     console.log(users);
+  //   } catch (error) {
+  //     res.status(500).json({
+  //       message: `The users info could not be found`,
+  //     });
+  //   }
 });
 
 server.post("/api/register", async (req, res) => {
